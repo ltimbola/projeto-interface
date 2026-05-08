@@ -1,0 +1,30 @@
+/* ── Reutiliza a estrutura de .form-page e .form-card ──── */
+
+/* ── Ações do formulário de auth ───────────────────────── */
+.auth-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+/* ── Links auxiliares (esqueci senha · criar conta) ─────── */
+.auth-links {
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+}
+
+.auth-links a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.auth-links a:hover { color: var(--color-primary-dark); }
+
+/* ── Separador entre links ─────────────────────────────── */
+.auth-links .sep {
+  margin-inline: var(--space-xs);
+  color: var(--color-text-light);
+}

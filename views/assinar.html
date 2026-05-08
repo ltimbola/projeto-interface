@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HABIT – Assinar Newsletter</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/assinar.css" />
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="HABIT – página inicial">HABIT</a>
+
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="#">Páginas</a>
+        <a href="destaques.html">Destaques</a>
+        <a href="assinar.html" aria-current="page">Assinar</a>
+        <a href="#" class="nav-admin">Admin</a>
+      </nav>
+
+      <form id="search-form" class="header-search" role="search" aria-label="Busca no site">
+        <label for="busca" class="visually-hidden">Buscar</label>
+        <input type="search" id="busca" name="q" placeholder="Buscar..." aria-label="Campo de busca" />
+        <button type="submit" class="btn btn-outline-neutral">Buscar</button>
+        <a href="#" class="btn btn-outline-neutral">Entrar</a>
+      </form>
+    </div>
+  </header>
+
+  <!-- ── Conteúdo principal ─────────────────────────── -->
+  <main id="main-content">
+    <div class="container">
+      <div class="main-wrapper">
+        <div class="form-page">
+
+          <section class="form-card" aria-labelledby="newsletter-title">
+            <h1 id="newsletter-title">Assine a newsletter</h1>
+
+            <form id="newsletter-form" novalidate>
+              <div class="form-field">
+                <label for="email">E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="E-mail"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="checkbox-row">
+                <input type="checkbox" id="aceite" name="aceite" required aria-required="true" />
+                <label for="aceite">
+                  Concordo em receber comunicações e li a
+                  <a href="#">política de privacidade</a>.
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Assinar</button>
+
+              <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+            </form>
+          </section>
+
+        </div>
+      </div><!-- /.main-wrapper -->
+    </div><!-- /.container -->
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────── -->
+  <footer class="site-footer-social" role="contentinfo">
+    <div class="container">
+      <nav class="footer-social-links" aria-label="Links de redes sociais">
+        <a href="#">Instagram</a>
+        <a href="#">Work</a>
+        <a href="#">Bags</a>
+        <a href="#">Lamp</a>
+        <a href="#">Books</a>
+      </nav>
+    </div>
+    <p class="footer-copyright">© 2025 Meu Site • Meu site</p>
+  </footer>
+
+  <script src="../controllers/assinarController.js"></script>
+</body>
+</html>

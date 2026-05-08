@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HABIT – Criar Conta</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/assinar.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="HABIT – página inicial">HABIT</a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="#">Páginas</a>
+        <a href="destaques.html">Destaques</a>
+        <a href="assinar.html">Assinar</a>
+        <a href="admin-categorias.html" class="nav-admin">Admin</a>
+      </nav>
+      <form id="search-form" class="header-search" role="search" aria-label="Busca no site">
+        <label for="busca" class="visually-hidden">Buscar</label>
+        <input type="search" id="busca" name="q" placeholder="Buscar..." aria-label="Campo de busca" />
+        <button type="submit" class="btn btn-outline-neutral">Buscar</button>
+        <a href="entrar.html" class="btn btn-outline-neutral">Entrar</a>
+      </form>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="main-wrapper">
+        <div class="form-page">
+
+          <section class="form-card" aria-labelledby="cadastro-title">
+            <h1 id="cadastro-title">Criar Conta</h1>
+
+            <form id="cadastro-form" novalidate>
+              <div class="form-field">
+                <label for="cadastro-nome">Nome completo</label>
+                <input
+                  type="text"
+                  id="cadastro-nome"
+                  name="nome"
+                  class="form-input"
+                  placeholder="Nome completo"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="cadastro-email">E-mail</label>
+                <input
+                  type="email"
+                  id="cadastro-email"
+                  name="email"
+                  class="form-input"
+                  placeholder="E-mail"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="cadastro-senha">Senha</label>
+                <input
+                  type="password"
+                  id="cadastro-senha"
+                  name="senha"
+                  class="form-input"
+                  placeholder="Senha"
+                  autocomplete="new-password"
+                  required
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="cadastro-confirm">Confirmar senha</label>
+                <input
+                  type="password"
+                  id="cadastro-confirm"
+                  name="confirmar"
+                  class="form-input"
+                  placeholder="Confirmar senha"
+                  autocomplete="new-password"
+                  required
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="checkbox-row">
+                <input type="checkbox" id="cadastro-aceite" name="aceite" required aria-required="true" />
+                <label for="cadastro-aceite">
+                  Concordo com os <a href="#">termos</a> e a <a href="#">política de privacidade</a>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Cadastrar</button>
+
+              <p id="cadastro-feedback" class="form-feedback" aria-live="polite"></p>
+            </form>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer-social" role="contentinfo">
+    <div class="container">
+      <nav class="footer-social-links" aria-label="Links de redes sociais">
+        <a href="#">Instagram</a>
+        <a href="#">Work</a>
+        <a href="#">Bags</a>
+        <a href="#">Lamp</a>
+        <a href="#">Books</a>
+      </nav>
+    </div>
+    <p class="footer-copyright">© 2025 Meu Site • Meu site</p>
+  </footer>
+
+  <script src="../controllers/criarContaController.js"></script>
+</body>
+</html>

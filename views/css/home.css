@@ -1,0 +1,181 @@
+/* ── Hero ──────────────────────────────────────────────── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  padding: var(--space-xl) var(--space-lg);
+  align-items: center;
+}
+
+.hero__content h1 {
+  font-size: clamp(1.6rem, 4vw, var(--fs-h1));
+  margin-bottom: var(--space-sm);
+}
+
+.hero__content p {
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.hero__image {
+  width: 100%;
+  min-height: 140px;
+  background-color: var(--color-placeholder);
+  border-radius: var(--radius-md);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── Seção interna ─────────────────────────────────────── */
+.section {
+  padding: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.section__title {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-lg);
+}
+
+/* ── Categorias Populares ──────────────────────────────── */
+.popular-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 481px) {
+  .popular-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 768px) {
+  .popular-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.popular-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.popular-card__img {
+  width: 100%;
+  height: 100px;
+  background-color: var(--color-placeholder);
+}
+
+.popular-card__label {
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+}
+
+/* ── Todas as Categorias ───────────────────────────────── */
+.all-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xs);
+}
+
+@media (min-width: 481px) {
+  .all-categories-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 768px) {
+  .all-categories-grid { grid-template-columns: repeat(5, 1fr); }
+}
+
+.category-tag {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--fs-small);
+  text-align: center;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  background: var(--color-bg);
+}
+
+.category-tag:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+/* ── Destaques + Editor ────────────────────────────────── */
+.highlights-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .highlights-layout { grid-template-columns: 3fr 2fr; }
+}
+
+.featured-posts { display: flex; flex-direction: column; gap: var(--space-md); }
+
+.featured-post-card {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.featured-post-card__meta {
+  font-size: var(--fs-small);
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.featured-post-card__title {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-xs);
+}
+
+.featured-post-card__read {
+  font-size: var(--fs-small);
+  color: var(--color-text-light);
+}
+
+.editor-picks {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.editor-picks h3 {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-md);
+}
+
+.editor-picks ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  list-style: disc;
+  padding-left: var(--space-lg);
+}
+
+.editor-picks li {
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 1024px) {
+  .hero { padding: var(--space-2xl) var(--space-xl); }
+  .section { padding: var(--space-xl); }
+}

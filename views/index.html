@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HABIT – Início</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="HABIT – página inicial">HABIT</a>
+
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="#">Páginas</a>
+        <a href="destaques.html">Destaques</a>
+        <a href="#">Assinar</a>
+        <a href="#" class="nav-admin">Admin</a>
+      </nav>
+
+      <form id="search-form" class="header-search" role="search" aria-label="Busca no site">
+        <label for="busca" class="visually-hidden">Buscar</label>
+        <input
+          type="search"
+          id="busca"
+          name="q"
+          placeholder="Buscar..."
+          aria-label="Campo de busca"
+        />
+        <button type="submit" class="btn btn-outline-neutral">Buscar</button>
+        <a href="#" class="btn btn-outline-neutral">Entrar</a>
+      </form>
+    </div>
+  </header>
+
+  <!-- ── Conteúdo principal ─────────────────────────── -->
+  <main id="main-content">
+    <div class="container">
+      <div class="main-wrapper">
+
+        <!-- Hero -->
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero__content">
+            <h1 id="hero-title">Navegue por tópicos de interesse</h1>
+            <p>Descubra conteúdos por categorias, posts em destaque e as escolhas do editor.</p>
+            <div class="hero__actions">
+              <a href="#categorias" class="btn btn-primary">Explorar categorias</a>
+              <a href="#"           class="btn btn-outline">Assine a newsletter</a>
+            </div>
+          </div>
+          <div class="hero__image" role="img" aria-label="Imagem de destaque da página inicial"></div>
+        </section>
+
+        <!-- Categorias Populares -->
+        <section class="section" id="categorias" aria-labelledby="popular-title">
+          <h2 id="popular-title" class="section__title">Categorias Populares</h2>
+          <div class="popular-grid" id="popular-grid" role="list" aria-label="Categorias populares">
+            <!-- preenchido por homeController.js -->
+          </div>
+        </section>
+
+        <!-- Todas as Categorias -->
+        <section class="section" aria-labelledby="all-cat-title">
+          <h2 id="all-cat-title" class="section__title">Todas as Categorias</h2>
+          <nav class="all-categories-grid" id="all-categories-grid" aria-label="Todas as categorias">
+            <!-- preenchido por homeController.js -->
+          </nav>
+        </section>
+
+        <!-- Postagens em Destaque + Escolhas do Editor -->
+        <section class="section" aria-labelledby="featured-title">
+          <div class="highlights-layout">
+            <div>
+              <h2 id="featured-title" class="section__title">Postagens em Destaque</h2>
+              <div class="featured-posts" id="featured-posts" role="list">
+                <!-- preenchido por homeController.js -->
+              </div>
+            </div>
+
+            <aside aria-labelledby="editor-title">
+              <div class="editor-picks">
+                <h3 id="editor-title">Escolhas do Editor</h3>
+                <ul id="editor-picks-list">
+                  <!-- preenchido por homeController.js -->
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+      </div><!-- /.main-wrapper -->
+    </div><!-- /.container -->
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────── -->
+  <footer class="site-footer-social" role="contentinfo">
+    <div class="container">
+      <nav class="footer-social-links" aria-label="Links de redes sociais">
+        <a href="#">Instagram</a>
+        <a href="#">Work</a>
+        <a href="#">Bags</a>
+        <a href="#">Lamp</a>
+        <a href="#">Books</a>
+      </nav>
+    </div>
+    <p class="footer-copyright">© 2025 Meu Site • Meu site</p>
+  </footer>
+
+  <!-- Models e Controller -->
+  <script src="../models/categorias.js"></script>
+  <script src="../models/posts.js"></script>
+  <script src="../controllers/homeController.js"></script>
+</body>
+</html>

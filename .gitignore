@@ -1,0 +1,24 @@
+# ── 40% do projeto – mantidos apenas localmente ──────────
+# Painel administrativo (6 HTML + 2 CSS + 2 models + 6 controllers)
+views/admin-categorias.html
+views/admin-criar-post.html
+views/admin-editor.html
+views/admin-usuarios.html
+views/admin-revisao.html
+views/admin-comentarios.html
+views/css/admin.css
+views/css/admin-criar-post.css
+models/admin.js
+models/usuarios.js
+controllers/adminCategoriasController.js
+controllers/adminCriarPostController.js
+controllers/adminEditorController.js
+controllers/adminUsuariosController.js
+controllers/adminRevisaoController.js
+controllers/adminComentariosController.js
+
+# Tela de perfil (1 HTML + 1 CSS + 1 model + 1 controller)
+views/perfil.html
+views/css/perfil.css
+models/perfil.js
+controllers/perfilController.js

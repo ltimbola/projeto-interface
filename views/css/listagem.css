@@ -1,0 +1,100 @@
+/* ── Cabeçalho da listagem ─────────────────────────────── */
+.listing-header {
+  padding: var(--space-xl) var(--space-lg) var(--space-md);
+}
+
+.listing-header h1 {
+  font-size: clamp(1.5rem, 3vw, var(--fs-h1));
+  margin-bottom: var(--space-md);
+}
+
+/* ── Filtros / tabs ────────────────────────────────────── */
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.filter-tab {
+  padding: var(--space-xs) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-small);
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+}
+
+.filter-tab:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+.filter-tab.active {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+/* ── Grade de posts ────────────────────────────────────── */
+.listing-section {
+  padding: 0 var(--space-lg) var(--space-xl);
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 481px) {
+  .posts-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 768px) {
+  .posts-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.post-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.post-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+
+.post-card__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-placeholder);
+}
+
+.post-card__body {
+  padding: var(--space-sm) var(--space-md) var(--space-md);
+}
+
+.post-card__title {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-xs);
+  line-height: var(--lh-heading);
+}
+
+.post-card__date {
+  font-size: var(--fs-small);
+  color: var(--color-text-light);
+}
+
+/* ── Botão carregar mais ───────────────────────────────── */
+.load-more-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+@media (min-width: 1024px) {
+  .listing-header { padding: var(--space-xl); }
+  .listing-section { padding: 0 var(--space-xl) var(--space-xl); }
+}

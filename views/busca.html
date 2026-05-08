@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HABIT – Resultados da busca</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/busca.css" />
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="HABIT – página inicial">HABIT</a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="#">Páginas</a>
+        <a href="destaques.html">Destaques</a>
+        <a href="assinar.html">Assinar</a>
+        <a href="admin-categorias.html" class="nav-admin">Admin</a>
+      </nav>
+      <form id="search-form" class="header-search" role="search" aria-label="Busca no site">
+        <label for="busca" class="visually-hidden">Buscar</label>
+        <input type="search" id="busca" name="q" placeholder="Buscar..." aria-label="Campo de busca" />
+        <button type="submit" class="btn btn-outline-neutral">Buscar</button>
+        <a href="entrar.html" class="btn btn-outline-neutral">Entrar</a>
+      </form>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="main-wrapper">
+
+        <div class="busca-header">
+          <h1 id="busca-titulo">Resultados para: ""</h1>
+        </div>
+
+        <section class="busca-section" id="resultados-lista" aria-label="Resultados da busca" aria-live="polite">
+          <!-- preenchido por buscaController.js -->
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer-social" role="contentinfo">
+    <div class="container">
+      <nav class="footer-social-links" aria-label="Links de redes sociais">
+        <a href="#">Instagram</a>
+        <a href="#">Work</a>
+        <a href="#">Bags</a>
+        <a href="#">Lamp</a>
+        <a href="#">Books</a>
+      </nav>
+    </div>
+    <p class="footer-copyright">© 2025 Meu Site • Meu site</p>
+  </footer>
+
+  <script src="../models/busca.js"></script>
+  <script src="../controllers/buscaController.js"></script>
+</body>
+</html>

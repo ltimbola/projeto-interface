@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HABIT – Categoria</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/listagem.css" />
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="HABIT – página inicial">HABIT</a>
+
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="#">Páginas</a>
+        <a href="destaques.html">Destaques</a>
+        <a href="#">Assinar</a>
+        <a href="#" class="nav-admin">Admin</a>
+      </nav>
+
+      <form id="search-form" class="header-search" role="search" aria-label="Busca no site">
+        <label for="busca" class="visually-hidden">Buscar</label>
+        <input
+          type="search"
+          id="busca"
+          name="q"
+          placeholder="Buscar..."
+          aria-label="Campo de busca"
+        />
+        <button type="submit" class="btn btn-outline-neutral">Buscar</button>
+        <a href="#" class="btn btn-outline-neutral">Entrar</a>
+      </form>
+    </div>
+  </header>
+
+  <!-- ── Conteúdo principal ─────────────────────────── -->
+  <main id="main-content">
+    <div class="container">
+      <div class="main-wrapper">
+
+        <!-- Cabeçalho da listagem -->
+        <section class="listing-header" aria-labelledby="listing-title">
+          <h1 id="listing-title">Categoria: Techno</h1>
+
+          <!-- Filtros -->
+          <nav class="filter-tabs" aria-label="Filtrar posts por">
+            <button class="filter-tab active" data-filter="popular"       aria-pressed="true">Popular</button>
+            <button class="filter-tab"         data-filter="mais-recentes" aria-pressed="false">Mais recentes</button>
+            <button class="filter-tab"         data-filter="ia"            aria-pressed="false">IA</button>
+            <button class="filter-tab"         data-filter="produtividade" aria-pressed="false">Produtividade</button>
+          </nav>
+        </section>
+
+        <!-- Grade de posts -->
+        <section class="listing-section" aria-label="Listagem de posts">
+          <div class="posts-grid" id="posts-grid" role="list">
+            <!-- preenchido por listagemController.js -->
+          </div>
+
+          <div class="load-more-wrapper">
+            <button id="btn-carregar-mais" class="btn btn-outline-neutral" type="button">
+              Carregar mais
+            </button>
+          </div>
+        </section>
+
+      </div><!-- /.main-wrapper -->
+    </div><!-- /.container -->
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────── -->
+  <footer class="site-footer-social" role="contentinfo">
+    <div class="container">
+      <nav class="footer-social-links" aria-label="Links de redes sociais">
+        <a href="#">Instagram</a>
+        <a href="#">Work</a>
+        <a href="#">Bags</a>
+        <a href="#">Lamp</a>
+        <a href="#">Books</a>
+      </nav>
+    </div>
+    <p class="footer-copyright">© 2025 Meu Site • Meu site</p>
+  </footer>
+
+  <!-- Models e Controller -->
+  <script src="../models/posts.js"></script>
+  <script src="../controllers/listagemController.js"></script>
+</body>
+</html>

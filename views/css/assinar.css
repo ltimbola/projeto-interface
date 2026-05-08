@@ -1,0 +1,89 @@
+/* ── Wrapper de página centrada ────────────────────────── */
+.form-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl) var(--container-pad);
+  min-height: 50vh;
+}
+
+/* ── Card do formulário ────────────────────────────────── */
+.form-card {
+  width: 100%;
+  max-width: 440px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+}
+
+.form-card h1 {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--space-lg);
+}
+
+/* ── Campos ────────────────────────────────────────────── */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.form-field label {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-muted);
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--fs-small);
+  color: var(--color-text);
+  transition: border-color 0.2s;
+}
+
+.form-input::placeholder { color: var(--color-text-light); }
+.form-input:focus { border-color: var(--color-primary); outline: none; }
+
+/* ── Checkbox row ──────────────────────────────────────── */
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.checkbox-row input[type="checkbox"] {
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--color-primary);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox-row label {
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  line-height: var(--lh-body);
+}
+
+.checkbox-row a { color: var(--color-primary); text-decoration: underline; }
+
+/* ── Mensagem de feedback ──────────────────────────────── */
+.form-feedback {
+  font-size: var(--fs-small);
+  margin-top: var(--space-sm);
+  display: none;
+}
+
+.form-feedback.success { color: var(--color-primary); display: block; }
+.form-feedback.error   { color: #c0392b; display: block; }
+
+@media (min-width: 768px) {
+  .form-card { padding: var(--space-2xl); }
+}
